@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- primary meta tags -->
+    <title>Payal Yadav</title>
+    <meta name="title" content="Payal Yadav" />
+    <meta
+      name="description"
+      content="A portfolio website is a personal website that showcases an individual's work, skills, and experiences. It is commonly used by professionals in creative fields (such as designers, photographers, writers, or developers) to present their projects and demonstrate their expertise to potential clients or employers."
+    />
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.svg"
+      type="image/svg+xml"
+    />
+    <!-- custom css -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <!-- custom font link -->
+    <link rel="stylesheet" href="/assets/font/font.css" />
+    <!-- preload -->
+  </head>
+  <body class="active">
+    <!-- loading -->
+    <div class="loading" data-load>
+      <img
+        src="./assets/images/loading.svg"
+        width="55"
+        height="55"
+        alt="loading"
+        class="img"
+      />
+      <img
+        src="./assets/images/loading-circle.svg"
+        width="70"
+        height="70"
+        alt="loading-circle"
+        class="circle"
+      />
+    </div>
+    <!-- header -->
+    <header class="header active" data-header>
+      <div class="container">
+        <a href="#" class="logo">
+          <img
+            src="./assets/images/logo.svg"
+            width="40"
+            height="40"
+            loading="lazy"
+            alt="Payal Yadav"
+          />
+        </a>
+        <button
+          class="hamburger-open"
+          aria-label="hamburger-open"
+          data-nav-toggler
+        >
+          <img src="./assets/images/menu.svg" alt="" />
+        </button>
+        <nav class="navbar" data-navbar>
+          <div class="nav-top">
+            <a href="#" class="logo">
+              <img
+                src="./assets/images/nav-logo.svg"
+                width="140"
+                height="140"
+                loading="lazy"
+                alt="Payal Yadav"
+                class="img"
+              />
+            </a>
+            <button
+              class="hamburger-close"
+              aria-label="hamburger-close"
+              data-nav-toggler
+            >
+              <span class="span one"></span>
+              <span class="span two"></span>
+            </button>
+          </div>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#Home" class="nav-link" data-nav-link> Home </a>
+            </li>
+            <li class="nav-item">
+              <a href="#gallery" class="nav-link" data-nav-link> Gallery </a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link" data-nav-link> About </a>
+            </li>
+            <li class="nav-item">
+              <a href="#service" class="nav-link" data-nav-link> Services </a>
+            </li>
+            <li class="nav-item">
+              <a href="#portfolio" class="nav-link" data-nav-link>
+                Portfolio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link" data-nav-link> Contact us </a>
+            </li>
+          </ul>
+          <button class="login-btn">
+            <img
+              src="./assets/images/user.svg"
+              width="21"
+              height="21"
+              alt="user icon"
+            />
+            <span class="span">Login</span>
+          </button>
+          <p class="nav-title">My Address</p>
+          <address class="nav-text">
+            3287 Indiana Avenue, Waialua, Hawaii
+          </address>
+          <p class="nav-text">
+            Urgent issue? call us at
+            <a href="tel:8085613846" class="contact-link">808-561-3846</a>
+          </p>
+        </nav>
+        <div class="overlay" data-nav-toggler data-overlay></div>
+      </div>
+    </header>
+    <!-- custom js link -->
+    <script type="module" src="./assets/js/script.js"></script>
+  </body>
+</html>
