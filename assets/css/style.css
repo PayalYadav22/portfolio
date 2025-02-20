@@ -117,7 +117,7 @@ img {
 button {
   background-color: transparent;
   border: none;
-  font-size: inherit;
+  font: inherit;
   cursor: pointer;
 }
 
@@ -143,7 +143,6 @@ body {
   line-height: 2.15;
   overflow-x: hidden;
   background-color: var(--smokey-black);
-  height: 300vh;
 }
 
 body.active {
