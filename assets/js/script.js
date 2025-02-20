@@ -130,15 +130,17 @@ window.addEventListener("load", () => {
 
 // back to top
 
-const backToTop = document.querySelector("[ data-back-top-btn]");
+const backToTop = document.querySelector("[data-back-top-btn]");
 
 window.addEventListener("scroll", () => {
   const bodyHeight = document.body.scrollHeight;
-
-  console.log(bodyHeight);
   const windowHeight = window.innerHeight;
   const scrollEndPosition = bodyHeight - windowHeight;
-  const totalScrollPercent = (window.scrollY / scrollEndPosition) * 100;
 
-  backToTop.textContent = `${totalScrollPercent.toFixed(0)}%`;
+  if (scrollEndPosition > 0) {
+    const totalScrollPercent = (window.scrollY / scrollEndPosition) * 100;
+    backToTop.textContent = `${totalScrollPercent.toFixed(0)}%`;
+  } else {
+    backToTop.textContent = "100%";
+  }
 });
