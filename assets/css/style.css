@@ -312,7 +312,6 @@ body.active {
   transform-origin: bottom;
   transition: 0.5s var(--cubic-in);
   transition-delay: 0.5s;
-  display: none;
 }
 
 .loading.load {
@@ -998,7 +997,3 @@ body.active {
 .cursor {
   display: none;
 }
-
-/*-----------------------------------*\
-  #MEDIA QUERIES
-\*-----------------------------------*/

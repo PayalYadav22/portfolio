@@ -167,3 +167,48 @@ const scrollReveal = function () {
 window.addEventListener("scroll", scrollReveal);
 
 scrollReveal();
+
+// custom cursor
+
+const cursor = document.querySelector("[data-cursor]");
+
+const anchorElements = document.querySelectorAll("a");
+
+const button = document.querySelectorAll("button");
+
+document.body.addEventListener("mousemove", (e) => {
+  setTimeout(() => {
+    cursor.style.top = `${e.clientY}px`;
+    cursor.style.left = `${e.clientX}px`;
+  }, 100);
+});
+
+// add cursor hovered class
+
+const hoverActive = () => {
+  cursor.classList.add("hovered");
+};
+
+// remove cursor hovered class
+
+const hoverInactive = () => {
+  cursor.classList.remove("hovered");
+};
+
+addEventOnElements(anchorElements, "mousemove", hoverActive);
+addEventOnElements(anchorElements, "mouseout", hoverInactive);
+
+addEventOnElements(button, "mousemove", hoverActive);
+addEventOnElements(button, "mouseout", hoverInactive);
+
+// add disabled class on cursorElement, when mouse out of mody
+
+document.body.addEventListener("mouseout", function () {
+  cursor.classList.add("disabled");
+});
+
+// remove disabled class on cursorElement, when mouse move of mody
+
+document.body.addEventListener("mousemove", function () {
+  cursor.classList.remove("disabled");
+});
