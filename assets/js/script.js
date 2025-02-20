@@ -130,17 +130,40 @@ window.addEventListener("load", () => {
 
 // back to top
 
-const backToTop = document.querySelector("[data-back-top-btn]");
+const backTopBtn = document.querySelector("[data-back-top-btn]");
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", function () {
   const bodyHeight = document.body.scrollHeight;
   const windowHeight = window.innerHeight;
-  const scrollEndPosition = bodyHeight - windowHeight;
+  const scrollEndPos = bodyHeight - windowHeight;
+  const totalScrollPercent = (window.scrollY / scrollEndPos) * 100;
 
-  if (scrollEndPosition > 0) {
-    const totalScrollPercent = (window.scrollY / scrollEndPosition) * 100;
-    backToTop.textContent = `${totalScrollPercent.toFixed(0)}%`;
+  backTopBtn.textContent = `${totalScrollPercent.toFixed(0)}%`;
+
+  // visible back top btn when scrolled 5% of the page
+  if (totalScrollPercent > 5) {
+    backTopBtn.classList.add("show");
   } else {
-    backToTop.textContent = "100%";
+    backTopBtn.classList.remove("show");
   }
 });
+
+// scroll reveal
+
+const revealElements = document.querySelectorAll("[data-reveal]");
+
+const scrollReveal = function () {
+  for (let i = 0; i < revealElements.length; i++) {
+    const element =
+      revealElements[i].getBoundingClientRect().top < window.innerHeight / 1.15;
+    if (element) {
+      revealElements[i].classList.add("revealed");
+    } else {
+      revealElements[i].classList.remove("revealed");
+    }
+  }
+};
+
+window.addEventListener("scroll", scrollReveal);
+
+scrollReveal();
