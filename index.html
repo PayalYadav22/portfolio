@@ -17,12 +17,14 @@
       type="image/svg+xml"
     />
     <!-- custom css -->
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- custom font link -->
-    <link rel="stylesheet" href="/assets/font/font.css" />
-    <!-- preload -->
+    <link rel="stylesheet" href="./assets/font/font.css" />
+    <!-- preload images -->
+    <link rel="preload" as="image" href="./assets/images/loading.svg" />
+    <link rel="preload" as="image" href="./assets/images/loading-circle.svg" />
   </head>
-  <body class="active">
+  <body class="active" id="top">
     <!-- loading -->
     <div class="loading" data-load>
       <img
@@ -1224,6 +1226,16 @@
         />
       </div>
     </footer>
+
+    <!-- back to top -->
+    <a
+      href="#top"
+      class="back-top-btn show"
+      aria-label="back to top"
+      data-back-top-btn
+    >
+      0%
+    </a>
 
     <!-- custom js link -->
     <script type="module" src="./assets/js/script.js"></script>

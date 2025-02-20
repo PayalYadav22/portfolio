@@ -127,3 +127,18 @@ const setLetterEffect = function () {
 window.addEventListener("load", () => {
   setLetterEffect();
 });
+
+// back to top
+
+const backToTop = document.querySelector("[ data-back-top-btn]");
+
+window.addEventListener("scroll", () => {
+  const bodyHeight = document.body.scrollHeight;
+
+  console.log(bodyHeight);
+  const windowHeight = window.innerHeight;
+  const scrollEndPosition = bodyHeight - windowHeight;
+  const totalScrollPercent = (window.scrollY / scrollEndPosition) * 100;
+
+  backToTop.textContent = `${totalScrollPercent.toFixed(0)}%`;
+});
